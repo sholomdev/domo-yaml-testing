@@ -1,0 +1,232 @@
+{
+  "name": "React DomoApp",
+  "version": "0.0.1",
+  "fullpage": true,
+  "size": {
+    "width": 4,
+    "height": 3
+  },
+  "mapping": [
+    {
+      "alias": "Datasets",
+      "dataSetId": "97303021-7ad7-4161-af42-fd5a53e30516",
+      "fields": [
+        {
+          "alias": "DatasetID",
+          "columnName": "Dataset ID"
+        },
+        {
+          "alias": "Name",
+          "columnName": "Name"
+        },
+        {
+          "alias": "LastTouched",
+          "columnName": "DataSet Last Touched Date/Time"
+        },
+        {
+          "alias": "Type",
+          "columnName": "Type"
+        },
+        {
+          "alias": "ReportLastRun",
+          "columnName": "Report Last Run"
+        },
+        {
+          "alias": "RowCount",
+          "columnName": "Row Count"
+        },
+        {
+          "alias": "ColumnCount",
+          "columnName": "Column Count"
+        },
+        {
+          "alias": "OwnerName",
+          "columnName": "Owner Name"
+        },
+        {
+          "alias": "Columns",
+          "columnName": "Columns"
+        }
+      ]
+    },
+    {
+      "alias": "TestResults",
+      "dataSetId": "3ec1a40e-d7c0-4629-be1f-87245c7b1988",
+      "fields": [
+        {
+          "alias": "DatasetID",
+          "columnName": "Dataset ID"
+        },
+        {
+          "alias": "ColumnName",
+          "columnName": "ColumnName"
+        },
+        {
+          "alias": "TestName",
+          "columnName": "TestName"
+        },
+        {
+          "alias": "Result",
+          "columnName": "Result"
+        },
+        {
+          "alias": "Date",
+          "columnName": "Date"
+        }
+      ]
+    },
+    {
+      "alias": "yaml",
+      "dataSetId": "a2eb5c55-ecc0-4b2d-aad2-481c952dba90",
+      "fields": [
+        {
+          "alias": "DatasetID",
+          "columnName": "DatasetID"
+        },
+        {
+          "alias": "DatasetName",
+          "columnName": "DatasetName"
+        },
+        {
+          "alias": "ColumnName",
+          "columnName": "ColumnName"
+        },
+        {
+          "alias": "TestName",
+          "columnName": "TestName"
+        }
+      ]
+    },
+
+    {
+      "alias": "TestResults",
+      "dataSetId": "3ec1a40e-d7c0-4629-be1f-87245c7b1988",
+      "fields": [
+        {
+          "alias": "DatasetID",
+          "columnName": "DatasetID"
+        },
+        {
+          "alias": "ColumnName",
+          "columnName": "ColumnName"
+        },
+        {
+          "alias": "TestName",
+          "columnName": "TestName"
+        },
+        {
+          "alias": "Result",
+          "columnName": "Result"
+        },
+        {
+          "alias": "Date",
+          "columnName": "Date"
+        }
+      ]
+    }
+  ],
+
+  "packageMapping": [
+    {
+      "alias": "runUpstreamDataflows",
+      "parameters": [
+        {
+          "alias": "dataset",
+          "type": "dataset",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "dataflowIDs",
+        "type": "text",
+        "isList": true,
+        "children": null
+      }
+    },
+    {
+      "alias": "startDataFlow",
+      "parameters": [
+        {
+          "alias": "dataFlowID",
+          "type": "text",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "result",
+        "type": "object",
+        "isList": true,
+        "children": null
+      }
+    },
+    {
+      "alias": "runDataset",
+      "parameters": [
+        {
+          "alias": "dataset",
+          "type": "dataset",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "result",
+        "type": "object",
+        "isList": true,
+        "children": null
+      }
+    },
+    {
+      "alias": "getCurrentTimestamp",
+      "parameters": [],
+      "output": {
+        "alias": "currentTimestamp",
+        "type": "number",
+        "isList": false,
+        "children": null
+      }
+    },
+    {
+      "alias": "uploadDataset",
+      "parameters": [
+        {
+          "alias": "dataset",
+          "type": "dataset",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        },
+        {
+          "alias": "values",
+          "type": "text",
+          "nullable": false,
+          "isList": false,
+          "children": null
+        }
+      ],
+      "output": {
+        "alias": "response",
+        "type": "object",
+        "isList": false,
+        "children": null
+      }
+    },
+    {
+      "alias": "runTests",
+      "parameters": [],
+      "output": {
+        "alias": "response",
+        "type": "text",
+        "isList": true,
+        "children": null
+      }
+    }
+  ],
+  "id": "954a8f3a-0404-46d9-90b9-458b1a160056",
+  "proxyId": "97faec83-56f3-4826-974a-c0555e671956"
+}
